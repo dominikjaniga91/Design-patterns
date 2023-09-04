@@ -1,4 +1,4 @@
-package org.patterns.chainofresponsibility;
+package org.patterns.chainofresponsibility.refactoring.guru.implementation;
 
 /**
  * ConcreteHandler. Checks whether there are too many failed login requests.
@@ -22,6 +22,7 @@ class ThrottlingValidator extends Validator {
      * checks by running its check after all other checks.
      */
     public boolean check(String email, String password) {
+        System.out.println("ThrottlingValidator check");
         if (System.currentTimeMillis() > currentTime + 60_000) {
             request = 0;
             currentTime = System.currentTimeMillis();

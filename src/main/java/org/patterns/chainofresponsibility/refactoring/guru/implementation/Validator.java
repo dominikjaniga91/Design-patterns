@@ -1,4 +1,4 @@
-package org.patterns.chainofresponsibility;
+package org.patterns.chainofresponsibility.refactoring.guru.implementation;
 
 /**
  * Base validator class.

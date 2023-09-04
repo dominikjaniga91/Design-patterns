@@ -1,4 +1,4 @@
-package org.patterns.chainofresponsibility;
+package org.patterns.chainofresponsibility.filter.implementation;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,14 +8,15 @@ import java.util.Map;
  */
 class Server {
     private Map<String, String> users = new HashMap<>();
-    private Validator validator;
+    private ValidatorChain validatorChain;
 
     /**
      * Client passes a chain of object to server. This improves flexibility and
      * makes testing the server class easier.
      */
-    public void setMiddleware(Validator validator) {
-        this.validator = validator;
+    public void setMiddleware(ValidatorChain validatorChain) {
+        System.out.println("Server setMiddleware " + validatorChain.getClass().getSimpleName());
+        this.validatorChain = validatorChain;
     }
 
     /**
@@ -23,7 +24,7 @@ class Server {
      * request to the chain.
      */
     public boolean logIn(String email, String password) {
-        if (validator.check(email, password)) {
+        if (validatorChain.validate(email, password)) {
             System.out.println("Authorization have been successful!");
 
             // Do something useful here for authorized users.

@@ -1,4 +1,4 @@
-package org.patterns.chainofresponsibility;
+package org.patterns.chainofresponsibility.refactoring.guru.implementation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +17,6 @@ class Demo {
     }
 
     private void init() {
-        server = new Server();
         server.register("admin@example.com", "admin_pass");
         server.register("user@example.com", "user_pass");
 
