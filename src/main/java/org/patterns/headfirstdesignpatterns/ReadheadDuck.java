@@ -1,6 +1,6 @@
 package org.patterns.headfirstdesignpatterns;
 
-class ReadheadDuck extends Duck {
+class ReadheadDuck extends Duck implements Flyable, Quackable {
 
     @Override
     void display() {
@@ -8,12 +8,12 @@ class ReadheadDuck extends Duck {
     }
 
     @Override
-    void fly() {
+    public void fly() {
         System.out.println("Readhead duck fly");
     }
 
     @Override
-    void quack() {
+    public void quack() {
         System.out.println("Quack from readhead duck");
     }
 }

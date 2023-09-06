@@ -1,6 +1,6 @@
 package org.patterns.headfirstdesignpatterns;
 
-class RubberDuck extends Duck {
+class RubberDuck extends Duck implements Quackable {
 
     @Override
     void display() {
@@ -8,12 +8,7 @@ class RubberDuck extends Duck {
     }
 
     @Override
-    void fly() {
-        throw new NotSupportOperationException("Method not supported");
-    }
-
-    @Override
-    void quack() {
+    public void quack() {
         System.out.println("Quack from rubber duck");
     }
 }
