@@ -14,7 +14,7 @@ public class StandardReader {
         )) {
             StringBuilder builder = new StringBuilder();
             while ((line = in.read()) >= 0) {
-                builder.append((char)line | 32);
+                builder.append((char)line);
             }
             return builder.toString().toLowerCase();
         }
