@@ -1,0 +1,26 @@
+= Observer pattern
+
+====
+Observer is a behavioral design pattern that lets you define
+a subscription mechanism to notify multiple objects about any
+events that happen to the object (subject) they’re observing.
+====
+
+Observer represent one-to-many relationship between objects
+so that when one object changes state, all its dependents
+are notified and updated automatically.
+
+The object that change he state is called subject, the other objects
+are observers, so we have one subject and many observers.
+
+This kind of interaction is also known as publish-subscribe.
+The subject is the publisher of notifications. It sends out these notifications without having to know who its observers are.
+
+....
+This text will be treated as verbatim content.
+....
+
+====
+This is an example of an example block.
+That's so meta.
+====
