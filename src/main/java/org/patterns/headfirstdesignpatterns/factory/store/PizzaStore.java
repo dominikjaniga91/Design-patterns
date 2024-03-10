@@ -1,6 +1,6 @@
-package org.patterns.headfirstdesignpatterns.factory;
+package org.patterns.headfirstdesignpatterns.factory.store;
 
-public abstract class PizzaStore {
+abstract class PizzaStore {
 
     Pizza orderPizza(String type) {
         Pizza pizza = createPizza(type);
